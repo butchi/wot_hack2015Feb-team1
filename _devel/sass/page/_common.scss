@@ -15,3 +15,11 @@ html, body {
   max-height: 690px;
   overflow: hidden;
 }
+
+.page {
+  > h1 {
+    padding: 12px 8px;
+    background-color: #121267;
+    color: #fff;
+  }
+}
