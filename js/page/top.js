@@ -5,11 +5,14 @@ window.licker.page = window.licker.page || {};
 
   var $page;
   var $user;
+  var $user1;
+  var $user2;
 
   function init() {
     $page = ns.util.getClass('page-top');
 
     $user = ns.util.findClass($page, 'user');
+    $user1 = ns.util.findClass($page, 'user-1');
 
     $user.on('click', function(evt) {
       var id = $(evt.target).attr('data-id');
@@ -20,8 +23,9 @@ window.licker.page = window.licker.page || {};
   /*
    */
   function update() {
-    var userList = ns.module.detectUser.analyze();
-    console.log(userList);
+    console.log(ns.userList);
+    var userId = ns.module.detectUser.analyze();
+    console.log(userId);
   }
 
   app.top = {

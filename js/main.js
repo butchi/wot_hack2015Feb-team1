@@ -7,13 +7,13 @@ window.licker = window.licker || {};
 
     $.getJSON('http://team-one.azurewebsites.net/api/users', function(json) {
       ns.userList = json;
+      ns.page.top.update();
     });
+
   });
 
   function init() {
     ns.page.top.init();
     ns.page.daily.init();
-    
-    ns.page.top.update();
   }
 }(window.licker));
