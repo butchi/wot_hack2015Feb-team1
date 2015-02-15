@@ -18,11 +18,7 @@ window.licker.page = window.licker.page || {};
       var id = $(evt.target).attr('data-id');
       ns.page.daily.update(id);
     });
-  }
 
-  /*
-   */
-  function update() {
     setInterval(function() {
       $.get('http://team-one.azurewebsites.net/api/current', function(json) {
         var userId = ns.module.detectUser.analyze(json);
@@ -36,6 +32,11 @@ window.licker.page = window.licker.page || {};
         }
       });
     }, 2000);
+  }
+
+  /*
+   */
+  function update() {
   }
 
   app.top = {
