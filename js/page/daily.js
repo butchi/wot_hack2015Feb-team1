@@ -26,7 +26,7 @@ window.licker.page = window.licker.page || {};
 
     $listEvent.html('');
 
-    $.getJSON('./js/data/sample.json', function(json) {
+    $.get('http://team-one.azurewebsites.net/api/sample', function(json) {
       json.content.forEach(function(elm) {
         var $tmpEvent = $tmpl.clone();
 
