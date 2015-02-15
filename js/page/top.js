@@ -23,9 +23,19 @@ window.licker.page = window.licker.page || {};
   /*
    */
   function update() {
-    console.log(ns.userList);
-    var userId = ns.module.detectUser.analyze();
-    console.log(userId);
+    setInterval(function() {
+      $.get('http://team-one.azurewebsites.net/api/current', function(json) {
+        var userId = ns.module.detectUser.analyze(json);
+        console.log(json);
+        console.log(userId);
+
+        if(userId) {
+          $user1.text(ns.userList[userId - 1].name);
+        } else {
+          $user1.text('運転手なし');
+        }
+      });
+    }, 2000);
   }
 
   app.top = {
