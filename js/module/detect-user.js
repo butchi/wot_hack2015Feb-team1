@@ -8,10 +8,17 @@ window.licker.module = window.licker.module || {};
       return: ユーザーID
    */
   function analyze(data) {
-    var userId = 2;
-    var ret = userId;
+    var userId = null;
+	var nowId = 0;
 
-    return ret;
+	nowId = data.lenght - 1;
+	for(var j=0;i<userList.length;i++ ){
+		if(ns.userList[j].size_top == data[nowId].size_top && ns.userList[j].size_bottom == data[nowId].size_bottom){
+		    userId = ns.userList[j].id;
+			break;
+		}
+	}
+    return userId;
   }
 
   app.detectUser = {
