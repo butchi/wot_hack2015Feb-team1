@@ -7,12 +7,12 @@
     },
     {
       "time_start": "11:30",
-      "place": "ダイエー",
+      "place": "デパート××",
       "action": "降りる"
     },
     {
       "time_start": "12:30",
-      "place": "ダイエー",
+      "place": "デパート××",
       "action": "乗る"
     },
     {
@@ -27,12 +27,12 @@
     },
     {
       "time_start": "13:00",
-      "place": "マルエツ",
+      "place": "スーパー○○",
       "action": "降りる"
     },
     {
       "time_start": "13:30",
-      "place": "マルエツ",
+      "place": "スーパー○○",
       "action": "乗る"
     },
     {
